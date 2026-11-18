@@ -30,6 +30,8 @@
 6. 按脚本录 ≤3 分钟视频并上传；7. 仓库推公开 + 粘贴材料提交表单（12-05 前）；
 8.（仅入围后）线下 Demo Day 是否参加另行决策。
 
+- 2026-11-18 01:39 CST 补记：遗留清单第 5、7 项中可自动办的部分已办完——仓库已推公开（https://github.com/ZhangHaozhi001/chipjobs）、https 站已用 GitHub Pages 上线（https://zhanghaozhi001.github.io/chipjobs/tapekit-site/，关键资源实测全 HTTP 200），两个 URL 已回填 SUBMISSION-PACKAGE.md §4。
+
 ## 风险提示（沿 GO-NOGO 口径，未变）
 
 闸 1 已按用户决定取消：大陆居民获奖后身份核查口径未向官方确认，风险自担；

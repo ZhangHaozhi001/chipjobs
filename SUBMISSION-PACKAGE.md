@@ -73,11 +73,11 @@ until deployment).
 
 | Field | Value |
 |---|---|
-| Website / app (https) | ⟦USER: public URL of the served site — repo serves via `npm run demo:site`; host the `src/` tree or the `dist-deweb/` bundle⟧ |
+| Website / app (https) | https://zhanghaozhi001.github.io/chipjobs/tapekit-site/ (GitHub Pages, live 2026-11-18; site root https://zhanghaozhi001.github.io/chipjobs/ redirects here) |
 | DeWEB (tape://) | ⟦USER: tape:// name after publishing the bundle on-chain⟧ |
 | Escrow contract (X Layer mainnet) | ⟦USER: address after deployment — deploy `ChipJobsEscrow(factory=0x1f09daefa827f02cbb40967cc91b259763760761, feeRecipient=<owner wallet>)` from `artifacts/ChipJobsEscrow.json`⟧ |
 | Demo circuit | ⟦USER: processor index + circuit #ID after the tape-out session⟧ |
-| Code repository | ⟦USER: public repo URL — local git repo in `~/workspace/tapeout/chipjobs`, push to a public host⟧ |
+| Code repository | https://github.com/ZhangHaozhi001/chipjobs (public, pushed 2026-11-18) |
 | Demo video (≤3 min) | ⟦USER: upload URL — script below⟧ |
 
 ## 5. Demo video script (≤3:00, shoot after deployment + tape-out)
@@ -122,10 +122,10 @@ tape:// 版亮相 → 超时全额退款收尾。
    check the page price first.
 4. **Publish the DeWEB site** — upload the `dist-deweb/` bundle files to a
    circuit container / SiteRegistry via TapeKit (wallet-signed), note the tape:// name.
-5. **Host the https site** (optional but recommended) — serve `src/` (or the
-   bundle) at a public URL.
+5. ~~**Host the https site**~~ ✅ **DONE 2026-11-18** — `src/` tree published
+   via GitHub Pages (gh-pages branch): https://zhanghaozhi001.github.io/chipjobs/tapekit-site/
 6. **Record the video** — follow §5 (≤3 min), upload (e.g. YouTube unlisted).
-7. **Push the repo public + submit the form** — push `chipjobs/` to a public
-   Git host, then paste §2–§4 into the official form and submit **by 12-05**
+7. **Push the repo public + submit the form** — ✅ repo push DONE 2026-11-18
+   (https://github.com/ZhangHaozhi001/chipjobs, public); remaining: paste §2–§4 into the official form and submit **by 12-05**
    (official deadline 12-07 23:59 UTC, provisional). The submit click is yours.
 8. *(Only if shortlisted)* Offline Demo Day attendance — decide when announced.
