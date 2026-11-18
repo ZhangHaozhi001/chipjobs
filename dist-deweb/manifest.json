@@ -1,0 +1,42 @@
+{
+  "app": "ChipJobs",
+  "entry": "tapekit-site/index.html",
+  "builtFrom": "src/ (tapekit-site + data)",
+  "files": [
+    {
+      "path": "data/escrow-read.js",
+      "bytes": 1774,
+      "sha256": "0cf28fb6bcde1ebeb13b71d8b1095d9188a79ec48baa93fd1332db79b206cc73"
+    },
+    {
+      "path": "data/escrow-write.js",
+      "bytes": 2567,
+      "sha256": "df1712b172b0a94130ce3fbe142cf5c2224be0294fd5e51ca0e83208462c290c"
+    },
+    {
+      "path": "data/tapeout-data.js",
+      "bytes": 4823,
+      "sha256": "78627d80e720efdc99a80ba70f8bec10e93fcbc2fbdc68e757c53bc292b252c0"
+    },
+    {
+      "path": "tapekit-site/app.js",
+      "bytes": 4943,
+      "sha256": "22c9e5abea5eb8d0250f2e30bb16352f14469fa18380f52f06dad5e07d5dde93"
+    },
+    {
+      "path": "tapekit-site/index.html",
+      "bytes": 4736,
+      "sha256": "d6e023ea6658acb5a299bca42e3eede4e9304c3875397ec1aed66a26f014e47a"
+    },
+    {
+      "path": "tapekit-site/tapekit-adapter.js",
+      "bytes": 2001,
+      "sha256": "77781680c04267d532b71fc3f3d96429e11a0ddd20ed859bc14e5752890d0831"
+    },
+    {
+      "path": "tapekit-site/tapeout-flow.js",
+      "bytes": 2255,
+      "sha256": "5ad8f9238adb5fdd9a25f28a16872993f023d61c245323d1bacec3aa3a579b4a"
+    }
+  ]
+}

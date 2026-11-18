@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ChipJobs — Circuit Design Bounties on TapeOut</title>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 2rem auto; max-width: 880px; padding: 0 1rem; color: #1a1a1a; }
+  h1 { font-size: 1.6rem; } .tag { color: #666; }
+  .card { border: 1px solid #ddd; border-radius: 10px; padding: 1rem; margin: 1rem 0; }
+  .mono { font-family: ui-monospace, monospace; font-size: .85em; word-break: break-all; }
+  .pill { display: inline-block; background: #eef4ff; border: 1px solid #b9d0ff; border-radius: 999px; padding: .1rem .6rem; font-size: .8em; }
+  table { width: 100%; border-collapse: collapse; } td, th { text-align: left; padding: .35rem .5rem; border-bottom: 1px solid #eee; }
+  .muted { color: #777; } button { padding: .45rem .9rem; border-radius: 8px; border: 1px solid #bbb; background: #f7f7f7; cursor: pointer; }
+  button:disabled { opacity: .45; cursor: not-allowed; }
+  label { display: block; margin: .5rem 0 .2rem; font-size: .9em; }
+  input, textarea { width: 100%; box-sizing: border-box; padding: .45rem; border: 1px solid #ccc; border-radius: 6px; }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  #log { white-space: pre-wrap; font-size: .85em; color: #333; }
+</style>
+</head>
+<body>
+  <h1>🧩 ChipJobs <span class="tag">— circuit-design bounties, settled by on-chain proof</span></h1>
+  <p>Post a bounty for a small digital circuit. A designer tapes it out on
+     <strong>TapeOut</strong>, submits the circuit ID, and the escrow contract
+     verifies ownership on-chain and pays out automatically — 95% to the
+     designer, 5% platform fee. No screenshots as proof, no disputes.</p>
+  <p><span class="pill" id="env-pill">environment: …</span>
+     <span class="pill">X Layer mainnet · chainId 196</span>
+     <button id="btn-connect">Connect wallet</button>
+     <span class="mono" id="acct"></span></p>
+
+  <div class="card">
+    <h2>TapeOut processors (live from X Layer mainnet)</h2>
+    <div id="processors" class="muted">loading…</div>
+  </div>
+
+  <div class="card">
+    <h2>Bounty board</h2>
+    <div id="board" class="muted">loading…</div>
+  </div>
+
+  <div class="row">
+    <div class="card">
+      <h2>Post a bounty</h2>
+      <label>Task specification (stored off-chain; its SHA-256 goes on-chain)</label>
+      <textarea id="f-spec" rows="3" placeholder="e.g. 8-bit comparator, truth table + test vectors at …"></textarea>
+      <label>Reward (OKB)</label>
+      <input id="f-reward" type="number" min="0" step="0.01" placeholder="10">
+      <label>Deadline (hours from now)</label>
+      <input id="f-hours" type="number" min="1" step="1" placeholder="72">
+      <label>Required processor index (ignored if “any” is checked)</label>
+      <input id="f-cpu" type="number" min="0" step="1" placeholder="0">
+      <label><input id="f-any" type="checkbox" style="width:auto"> Any processor may be used</label>
+      <p><button id="btn-post" disabled>Post bounty (signs + funds)</button></p>
+    </div>
+
+    <div class="card">
+      <h2>Claim a bounty</h2>
+      <p class="muted">First tape out your circuit: <a id="tapeout-link" href="https://tapeout.net/" target="_blank" rel="noopener">open tapeout.net</a>
+         with the wallet that will claim, on the bounty's processor. Then paste the result:</p>
+      <label>Bounty #</label>
+      <input id="c-id" type="number" min="0" step="1" placeholder="0">
+      <label>Processor index used</label>
+      <input id="c-cpu" type="number" min="0" step="1" placeholder="0">
+      <label>Circuit #ID minted to you</label>
+      <input id="c-circuit" type="number" min="1" step="1" placeholder="1">
+      <p><button id="btn-claim" disabled>Submit &amp; claim (verifies on-chain)</button></p>
+      <div id="claim-help" class="muted"></div>
+    </div>
+  </div>
+
+  <div class="card"><h2>Activity</h2><div id="log" class="muted">—</div></div>
+
+  <div class="card">
+    <h2>How it works</h2>
+    <ol>
+      <li>Poster locks OKB in the ChipJobs escrow with a spec hash, a target processor and a deadline.</li>
+      <li>Designer builds the circuit on tapeout.net using an existing TapeOut processor and tapes it out (the circuit NFT lands in their wallet).</li>
+      <li>Designer calls <span class="mono">submitAndClaim(bounty, cpu, circuitId)</span>; the contract checks
+          <span class="mono">factory.cpuAt(cpu)</span> + <span class="mono">ownerOf(circuitId) == designer</span> and pays instantly.</li>
+      <li>No valid claim before the deadline? The poster is refunded in full.</li>
+    </ol>
+  </div>
+
+<script type="module" src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "chipjobs",
+  "version": "0.1.0",
+  "private": true,
+  "description": "ChipJobs — on-chain circuit-design bounty market on TapeOut / X Layer (M1 skeleton)",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "compile": "node scripts/compile.js",
+    "test": "node --test test/*.test.mjs",
+    "demo:local": "node scripts/demo-local.js",
+    "demo:mainnet-read": "node scripts/read-mainnet.js",
+    "demo:site": "node scripts/serve-site.js"
+  },
+  "dependencies": {
+    "ethers": "^6.13.0"
+  },
+  "devDependencies": {
+    "ganache": "^7.9.2",
+    "solc": "^0.8.28"
+  },
+  "engines": { "node": ">=18" }
+}

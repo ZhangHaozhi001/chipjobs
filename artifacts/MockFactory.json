@@ -1,0 +1,94 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "cpu",
+          "type": "address"
+        }
+      ],
+      "name": "addCPU",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "i",
+          "type": "uint256"
+        }
+      ],
+      "name": "cpuAt",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "cpuCount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "cpus",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "a",
+          "type": "address"
+        }
+      ],
+      "name": "isCPU",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6080604052348015600e575f5ffd5b506102e18061001c5f395ff3fe608060405234801561000f575f5ffd5b5060043610610055575f3560e01c80630920da31146100595780634bc7cbbd1461007f5780635f5a364f146100aa578063a94da8a7146100cd578063d2c26963146100d4575b5f5ffd5b61006c610067366004610234565b6100e7565b6040519081526020015b60405180910390f35b61009261008d366004610261565b610143565b6040516001600160a01b039091168152602001610076565b6100bd6100b8366004610234565b6101b3565b6040519015158152602001610076565b5f5461006c565b6100926100e2366004610261565b61020d565b5f8054600180820183558280527f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e56390910180546001600160a01b0319166001600160a01b038516179055815461013d9190610278565b92915050565b5f805482106101875760405162461bcd60e51b815260206004820152600c60248201526b6f7574206f662072616e676560a01b604482015260640160405180910390fd5b5f828154811061019957610199610297565b5f918252602090912001546001600160a01b031692915050565b5f805b5f5481101561020557826001600160a01b03165f82815481106101db576101db610297565b5f918252602090912001546001600160a01b0316036101fd5750600192915050565b6001016101b6565b505f92915050565b5f818154811061021b575f80fd5b5f918252602090912001546001600160a01b0316905081565b5f60208284031215610244575f5ffd5b81356001600160a01b038116811461025a575f5ffd5b9392505050565b5f60208284031215610271575f5ffd5b5035919050565b8181038181111561013d57634e487b7160e01b5f52601160045260245ffd5b634e487b7160e01b5f52603260045260245ffdfea264697066735822122043262f1901e27c0a0147febd4446ed74832b5374c6e52929a3ae3b22b2ccd4a664736f6c63430008260033"
+}
